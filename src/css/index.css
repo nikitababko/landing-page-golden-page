@@ -1,5 +1,5 @@
 /*======================================================= 
-Import components 
+Reset styles
 =======================================================*/
 html,
 body,
@@ -403,6 +403,46 @@ textarea {
   color: #000;
   padding: 0.2em 0; }
 
+/*======================================================= 
+General styles
+=======================================================*/
+.container {
+  max-width: 1250px;
+  padding: 0 25px;
+  margin: 0 auto; }
+
+.section__header {
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 80px; }
+
+body {
+  font-family: "Arial Regular"; }
+
+h2,
+h4 {
+  font-family: "Arial Bold"; }
+
+/*======================================================= 
+Import fonts
+=======================================================*/
+@font-face {
+  font-family: "Arial Regular";
+  src: local("Arial-Regular"), local("Arial-Regular"), url("../fonts/arial-regular/arial-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/arial-regular/arial-regular.woff") format("woff"), url("../fonts/arial-regular/arial-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Arial Bold";
+  src: local("Arial-Bold"), local("Arial-Bold"), url("../fonts/arial-bold/arial-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/arial-bold/arial-bold.woff") format("woff"), url("../fonts/arial-bold/arial-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+/*======================================================= 
+Import components 
+=======================================================*/
 .header {
   position: absolute;
   top: 0;
@@ -720,11 +760,7 @@ textarea {
 /*======================================================= 
 Media
 =======================================================*/
-@media (max-width: 1250px) {
-  .header__logo img {
-    width: 90px; } }
-
-@media (max-width: 860px) {
+@media (max-width: 768px) {
   .header .container {
     padding: 0; }
   .header__inner {
@@ -833,31 +869,70 @@ Media
   .header .container {
     max-width: 576px; } }
 
-@media (max-width: 1250px) {
-  .intro__title {
-    font-size: 35px; }
-  .intro__subtitle {
-    font-size: 45px; }
+@media (max-width: 1024px) {
+  .intro__window-modal {
+    width: 600px;
+    height: 350px; }
   @-webkit-keyframes drop {
     0% { }
     70% {
-      -webkit-transform: translateY(-210px);
-              transform: translateY(-210px); }
+      -webkit-transform: translateY(110px);
+              transform: translateY(110px); }
+    100% {
+      -webkit-transform: translateY(-250px);
+              transform: translateY(-250px); } }
+  @keyframes drop {
+    0% { }
+    70% {
+      -webkit-transform: translateY(110px);
+              transform: translateY(110px); }
+    100% {
+      -webkit-transform: translateY(-250px);
+              transform: translateY(-250px); } }
+  .window-modal__title {
+    font-size: 40px; }
+  .window-modal__site-information {
+    font-size: 30px;
+    padding: 0 40px; } }
+
+@media (orientation: landscape) {
+  .intro__inner {
+    padding-top: 250px; } }
+
+@media (max-width: 768px) {
+  .intro__window-modal {
+    width: 600px;
+    height: 350px; }
+  @-webkit-keyframes drop {
+    0% { }
+    70% {
+      -webkit-transform: translateY(110px);
+              transform: translateY(110px); }
     100% {
       -webkit-transform: translateY(-450px);
               transform: translateY(-450px); } }
   @keyframes drop {
     0% { }
     70% {
-      -webkit-transform: translateY(-210px);
-              transform: translateY(-210px); }
+      -webkit-transform: translateY(110px);
+              transform: translateY(110px); }
     100% {
       -webkit-transform: translateY(-450px);
-              transform: translateY(-450px); } } }
+              transform: translateY(-450px); } }
+  .window-modal__title {
+    font-size: 40px; }
+  .window-modal__site-information {
+    font-size: 30px;
+    padding: 0 40px; } }
 
-@media (max-width: 860px) {
+@media (max-width: 480px) {
+  .intro__inner {
+    padding-top: 230px;
+    max-width: 576px; }
+  .intro__subtitle {
+    font-size: 45px; }
   .intro__window-modal {
-    width: 600px;
+    width: 300px;
     height: 350px; }
   @-webkit-keyframes drop {
     0% { }
@@ -865,51 +940,28 @@ Media
       -webkit-transform: translateY(110px);
               transform: translateY(110px); }
     100% {
-      -webkit-transform: translateY(-190px);
-              transform: translateY(-190px); } }
+      -webkit-transform: translateY(-350px);
+              transform: translateY(-350px); } }
   @keyframes drop {
     0% { }
     70% {
       -webkit-transform: translateY(110px);
               transform: translateY(110px); }
     100% {
-      -webkit-transform: translateY(-190px);
-              transform: translateY(-190px); } }
+      -webkit-transform: translateY(-350px);
+              transform: translateY(-350px); } }
   .window-modal__title {
+    padding: 50px 0;
     font-size: 40px; }
   .window-modal__site-information {
-    font-size: 30px;
-    padding: 0 40px; } }
+    padding: 0 40px;
+    font-size: 20px; }
+  .window-close {
+    top: 10px; } }
 
-@media (max-width: 700px) {
+@media (max-width: 320px) {
   .intro__window-modal {
-    width: 600px;
-    height: 350px; }
-  .window-modal__title {
-    font-size: 40px; }
-  .window-modal__site-information {
-    font-size: 30px;
-    padding: 0 40px; } }
-
-@media (max-width: 670px) {
-  .intro__window-modal {
-    width: 500px;
-    height: 350px; }
-  .window-modal__title {
-    font-size: 40px; }
-  .window-modal__site-information {
-    font-size: 25px;
-    padding: 0 40px; } }
-
-@media (max-width: 590px) {
-  .intro__inner {
-    max-width: 576px; }
-  .intro__title {
-    font-size: 35px; }
-  .intro__subtitle {
-    font-size: 45px; }
-  .intro__window-modal {
-    width: 500px;
+    width: 230px;
     height: 300px; }
   @-webkit-keyframes drop {
     0% { }
@@ -917,23 +969,30 @@ Media
       -webkit-transform: translateY(110px);
               transform: translateY(110px); }
     100% {
-      -webkit-transform: translateY(-450px);
-              transform: translateY(-450px); } }
+      -webkit-transform: translateY(-350px);
+              transform: translateY(-350px); } }
   @keyframes drop {
     0% { }
     70% {
       -webkit-transform: translateY(110px);
               transform: translateY(110px); }
     100% {
-      -webkit-transform: translateY(-450px);
-              transform: translateY(-450px); } }
+      -webkit-transform: translateY(-350px);
+              transform: translateY(-350px); } }
   .window-modal__title {
-    font-size: 40px; }
+    padding: 50px 0 10px;
+    font-size: 25px; }
   .window-modal__site-information {
-    font-size: 25px;
-    padding: 0 40px; } }
+    padding: 0 40px;
+    font-size: 15px; }
+  .window-close {
+    top: 10px; } }
 
-@media (max-width: 880px) {
+@media (orientation: landscape) and (max-width: 568px) {
+  .intro__window-modal {
+    width: 430px; } }
+
+@media (max-width: 1024px) {
   .services__content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1033,6 +1092,10 @@ Media
   .our-portfolio__icon {
     width: 300px; } }
 
+@media (max-width: 360px) {
+  .our-portfolio__icon {
+    width: 200px; } }
+
 @media (max-width: 1190px) {
   .about-us__content {
     display: -webkit-box;
@@ -1070,14 +1133,7 @@ Media
   .about-us__item--bot {
     margin-bottom: 0; } }
 
-@media (max-width: 870px) {
-  .about-us__item {
-    width: 650px; }
-  .about-us__description {
-    width: 600px;
-    margin-left: 300px; } }
-
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .about-us__content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1115,20 +1171,11 @@ Media
   .about-us__item--bot {
     margin-bottom: 0; } }
 
-/*======================================================= 
-Import fonts
-=======================================================*/
-@font-face {
-  font-family: "Arial Regular";
-  src: local("Arial-Regular"), local("Arial-Regular"), url("../fonts/arial-regular/arial-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/arial-regular/arial-regular.woff") format("woff"), url("../fonts/arial-regular/arial-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Arial Bold";
-  src: local("Arial-Bold"), local("Arial-Bold"), url("../fonts/arial-bold/arial-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/arial-bold/arial-bold.woff") format("woff"), url("../fonts/arial-bold/arial-bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
+@media (max-width: 376px) {
+  .social__link {
+    padding: 14px 14px;
+    margin: 0 10px;
+    font-size: 20px; } }
 
 /*======================================================= 
 Import fontawesome config
@@ -5600,26 +5647,5 @@ readers do not read off random characters that represent icons */
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
-
-/*======================================================= 
-General styles
-=======================================================*/
-.container {
-  width: 100%;
-  max-width: 1250px;
-  padding: 0 25px;
-  margin: 0 auto; }
-
-.section__header {
-  line-height: 1.8;
-  text-align: center;
-  margin-bottom: 80px; }
-
-body {
-  font-family: "Arial Regular"; }
-
-h2,
-h4 {
-  font-family: "Arial Bold"; }
 
 /*# sourceMappingURL=index.css.map */

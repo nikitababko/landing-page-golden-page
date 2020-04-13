@@ -1,14 +1,6 @@
 //================== Media ======================//
-@media (max-width: 1250px) {
-    ////////////// header //////////////////
-    .header__logo {
-        img {
-            width: 90px;
-        }
-    }
-}
 
-@media (max-width: 860px) {
+@media (max-width: 768px) {
     .header {
         .container {
             padding: 0;

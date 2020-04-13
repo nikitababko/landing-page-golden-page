@@ -1,5 +1,4 @@
 //================== Media ======================//
-
 @media (max-width: 1190px) {
     .about-us__content {
         display: flex;
@@ -43,17 +42,7 @@
     }
 }
 
-@media (max-width: 870px) {
-    .about-us__item {
-        width: 650px;
-    }
-    .about-us__description {
-        width: 600px;
-        margin-left: 300px;
-    }
-}
-
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .about-us__content {
         display: flex;
         flex-direction: column;
