@@ -2,11 +2,12 @@
 
 ## &#x1F4D8; About project
 
+### [You can check out the demo.](https://nikitababko.github.io/landing-page-golden-page/)
+
 ### Where and what is located (files, folders).
 
--   File "Golden-Page.psd" - Layout of the site from which I wrote the code
 -   Folder "src" - project's source
--   Folder "dist" - ready project
+-   Folder "build" - ready project
 -   File "gulpfile.js" - main config
 -   Folder "gulp-tasks" - this storage place for "gulp tasks"
 
