@@ -12,7 +12,7 @@
     "deploy": "gh-pages -d build"
   },
   "license": "ISC",
-  "homepage": "http:whiterabbit1966.github.io/landing-page___golden-page___-LIGHT-",
+  "homepage": "http://nikitababko.github.io/landing-page-golden-page",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
